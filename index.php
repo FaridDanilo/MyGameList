@@ -1,3 +1,5 @@
+<?php include "assets/config/conf.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="<?= ASSETS_URL ?>css/styles.css">
     <title>My Game List</title>
 </head>
 
@@ -23,7 +25,7 @@
             <div class="dropdown">
                 <button class="dropdown-btn">Add New Game<i class="fa-solid fa-plus"></i></button>
                 <ul class="dropdown-content">
-                    <li><a href="#">New Game</a></li>
+                    <li><a href="new_game.php">New Game</a></li>
                     <li><a href="#">New Sequel</a></li>
                     <li><a href="#">New DLC</a></li>
                 </ul>
@@ -132,7 +134,7 @@
         </div>
     </main>
 
-    <script src="js/scripts.js"></script>
+    <script src="<?= ASSETS_URL ?>js/scripts.js"></script>
 </body>
 
 </html>
