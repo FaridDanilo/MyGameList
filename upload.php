@@ -1,5 +1,6 @@
-<?php
-include "assets/db/conn.php";
+<?php include "assets/config/conf.php";
+
+include DB_CONN_URL;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title_game = $_POST['title_game'];

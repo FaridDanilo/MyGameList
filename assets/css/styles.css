@@ -40,57 +40,28 @@ header nav {
     justify-content: space-between;
 }
 
-/* .list-games,
-.add-games {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    margin: 10px;
-    padding: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 8px;
-    color: var(--white-color);
-    border: 1px solid var(--slate-shadow);
-    background-color: var(--deep-space);
-} */
-
-/* .list-games .fa-gamepad,
-.fa-plus {
-    margin-left: 8px;
-    font-size: 13px;
-} */
-
-/* .list-games:hover,
-.add-games:hover {
-    background-color: var(--deep-light-space);
-} */
-
 .dropdown {
     position: relative;
     display: inline-block;
-    margin: 13px;
+    margin: 15px;
     border-radius: 8px;
+    cursor: pointer;
     color: var(--white-color);
     border: 1px solid var(--slate-shadow);
     background-color: var(--deep-space);
 }
 
 .dropdown-btn {
-    background: none;
-    border: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    padding: 10px 18px;
-    border-radius: 5px;
+    all: unset;
     display: flex;
     align-items: center;
+    padding: 8px 14px;
+    font-size: 13px;
     gap: 8px;
 }
 
-.dropdown-btn:hover {
-    background: var(--deep-light-space, #2f353f);
+.dropdown:hover {
+    background-color: var(--deep-light-space);
 }
 
 .dropdown-content {
@@ -178,10 +149,6 @@ main {
 .environments {
     padding-bottom: 12px;
     border-bottom: 1px solid var(--slate-shadow);
-}
-
-.environments .fa-seedling {
-    margin-left: 10px;
 }
 
 .environments picture img {
@@ -292,11 +259,11 @@ main {
 /* ========== Requirements END ========== */
 
 /* ========== Add New Gamge Form START ========== */
+
 form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     border: 1px solid var(--slate-shadow);
     max-width: 500px;
 }
@@ -312,6 +279,20 @@ textarea {
     max-width: 500px;
     min-height: 100px;
     resize: vertical;
+}
+
+fieldset {
+    display: flex;
+    justify-content: space-between;
+}
+
+.requirements-content p {
+    margin-top: 10px;
+}
+
+.requirements-content select {
+    display: flex;
+    /* margin: 10px 0; */
 }
 /* ========== Add New Gamge Form END ========== */
 
