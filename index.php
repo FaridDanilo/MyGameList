@@ -1,4 +1,4 @@
-<?php include "assets/config/conf.php"; ?>
+<?php include "source/config/conf.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@
             <div class="dropdown">
                 <button class="dropdown-btn">Add New Game<i class="fa-solid fa-plus"></i></button>
                 <ul class="dropdown-content">
-                    <li><a href="new_game.php">New Game</a></li>
+                    <li><a href="pages/new_game.php">New Game</a></li>
                     <li><a href="#">New Sequel</a></li>
                     <li><a href="#">New DLC</a></li>
                 </ul>
@@ -37,7 +37,7 @@
         <h1 class="title-game">Ghost Of Tsushima</h1>
         <div class="main-content">
             <div class="description">
-                <picture><img src="assets/img/ghost_of_tushima/front-page/ghost_of_tsushima.jpg" alt="Front Page">
+                <picture><img src="public/assets/img/ghost_of_tushima/front-page/ghost_of_tsushima.jpg" alt="Front Page">
                 </picture>
                 <p>It is an open-world action game set in feudal Japan. The protagonist is Jin Sakai, a samurai who
                     risks everything to defend the island of Tsushima from the Mongol invasion. Frequent sword fights
@@ -54,28 +54,23 @@
                 <div class="content">
                     <div class="slideshow-container">
                         <div>
-                            <picture><img src="assets/img/ghost_of_tushima/environments/env_1.jpeg" alt="Env_1">
-                            </picture>
+                            <picture><img src="public/assets/img/ghost_of_tushima/environments/env_1.jpeg" alt="Env_1"></picture>
                         </div>
 
                         <div>
-                            <picture><img src="assets/img/ghost_of_tushima/environments/env_2.jpeg" alt="Env_2">
-                            </picture>
+                            <picture><img src="public/assets/img/ghost_of_tushima/environments/env_2.jpeg" alt="Env_2"></picture>
                         </div>
 
                         <div>
-                            <picture><img src="assets/img/ghost_of_tushima/environments/env_3.jpeg" alt="Env_3">
-                            </picture>
+                            <picture><img src="public/assets/img/ghost_of_tushima/environments/env_3.jpeg" alt="Env_3"></picture>
                         </div>
 
                         <div>
-                            <picture><img src="assets/img/ghost_of_tushima/environments/env_4.jpeg" alt="Env_4">
-                            </picture>
+                            <picture><img src="public/assets/img/ghost_of_tushima/environments/env_4.jpeg" alt="Env_4"></picture>
                         </div>
 
                         <div>
-                            <picture><img src="assets/img/ghost_of_tushima/environments/env_5.jpeg" alt="Env_5">
-                            </picture>
+                            <picture><img src="public/assets/img/ghost_of_tushima/environments/env_5.jpeg" alt="Env_5"></picture>
                         </div>
                     </div>
                     <button class="prev-slide"><i class="fa-solid fa-chevron-left"></i></button>
@@ -93,15 +88,15 @@
                 <h2>Platforms</h2>
                 <div class="content">
                     <div class="box">
-                        <img class="platforms-icon" src="assets/svg/playstation.svg" alt="PSP">
+                        <img class="platforms-icon" src="public/assets/svg/playstation.svg" alt="psp">
                     </div>
 
                     <div class="box">
-                        <img class="platforms-icon" src="assets/svg/xbox.svg" alt="XBOX">
+                        <img class="platforms-icon" src="public/assets/svg/xbox.svg" alt="xbox">
                     </div>
 
                     <div class="box">
-                        <img class="platforms-icon" src="assets/svg/steam.svg" alt="STEAM">
+                        <img class="platforms-icon" src="public/assets/svg/steam.svg" alt="steam">
                     </div>
                 </div>
             </div>
