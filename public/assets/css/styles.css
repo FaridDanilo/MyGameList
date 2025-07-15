@@ -258,20 +258,25 @@ main {
 
 /* ========== Requirements END ========== */
 
-/* ========== Add New Gamge Form START ========== */
 
+/* ========== Add New Game Form START ========== */
 form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 1px solid var(--slate-shadow);
     max-width: 500px;
+    border-radius: 5px;
 }
 
 .form-content {
     display: flex;
     width: 500px;
     flex-direction: column;
+    padding: 10px;
+}
+
+input, select {
+    border: none;
+    margin: 10px 0;
+    padding: 8px 12px;
 }
 
 textarea {
@@ -279,11 +284,43 @@ textarea {
     max-width: 500px;
     min-height: 100px;
     resize: vertical;
+    border: none;
 }
 
-fieldset {
+.fieldset-platforms {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.fieldset-platforms .platform {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--slate-shadow);
+}
+
+.fieldset-platforms img {
+    width: 2rem;
+}
+
+
+.fieldset-platforms input[type="checkbox"] {
+    display: none;
+}
+
+.fieldset-requirements {
+    display: flex;
+    margin-top: 15px;
     justify-content: space-between;
+}
+
+.requirements-content {
+    margin: 10px;
 }
 
 .requirements-content p {
@@ -294,5 +331,5 @@ fieldset {
     display: flex;
     /* margin: 10px 0; */
 }
-/* ========== Add New Gamge Form END ========== */
+/* ========== Add New Game Form END ========== */
 

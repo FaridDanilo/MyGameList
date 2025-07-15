@@ -8,18 +8,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $platforms = isset($_POST['platforms']) ? implode(',', $_POST['platforms']) : '';
 
     // Requisitos mínimos
-    $min_os = $_POST['min_system_operating'] ?? '';
-    $min_cpu = $_POST['cpu'][0] ?? '';
-    $min_ram = $_POST['ram'][0] ?? '';
-    $min_gpu = $_POST['gpu'][0] ?? '';
-    $min_storage = $_POST['storage'][0] ?? '';
+    $min_os = $_POST['os'][0];
+    $min_cpu = $_POST['cpu'][0];
+    $min_ram = $_POST['ram'][0];
+    $min_gpu = $_POST['gpu'][0];
+    $min_storage = $_POST['storage'][0];
 
     // Requisitos recomendados
-    $rec_os = $_POST['rec_system_operating'] ?? '';
-    $rec_cpu = $_POST['cpu'][1] ?? '';
-    $rec_ram = $_POST['ram'][1] ?? '';
-    $rec_gpu = $_POST['gpu'][1] ?? '';
-    $rec_storage = $_POST['storage'][1] ?? '';
+    $rec_os = $_POST['os'][1];
+    $rec_cpu = $_POST['cpu'][1];
+    $rec_ram = $_POST['ram'][1];
+    $rec_gpu = $_POST['gpu'][1];
+    $rec_storage = $_POST['storage'][1];
 
     $upload_dir = '../../uploads/';
 
@@ -72,18 +72,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insertar requisitos en tabla requirements
     $stmt_req = $conn->prepare("INSERT INTO requirements (
-        game_id, min_system_operating, min_cpu, min_ram, min_gpu, min_storage,
-        rec_system_operating, rec_cpu, rec_ram, rec_gpu, rec_storage
+        game_id, min_os, min_cpu, min_ram, min_gpu, min_storage,
+        rec_os, rec_cpu, rec_ram, rec_gpu, rec_storage
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     $stmt_req->bind_param(
-        "issssssssss",
-        $game_id, $min_os, $min_cpu, $min_ram, $min_gpu, $min_storage,
-        $rec_os, $rec_cpu, $rec_ram, $rec_gpu, $rec_storage
+        "issssssssss", $game_id, $min_os, $min_cpu, $min_ram, $min_gpu, $min_storage, $rec_os, $rec_cpu, $rec_ram, $rec_gpu, $rec_storage
     );
     $stmt_req->execute();
 
-    header("Location: ../../index.php");
-    exit;
+    print_r($_POST);
+
+    // header("Location: ../../index.php");
+    // exit;
+
+    $stmt->close();
+    $conn->close();
+    $stmt_img->close();
+    $stmt_req->close();
 }
 ?>

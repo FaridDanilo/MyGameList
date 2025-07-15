@@ -15,33 +15,63 @@
                 <input type="file" name="enviroments[]" accept="image/*" multiple required>
                 <input type="file" name="mechanics[]" accept="image/*" multiple required>
 
-                <fieldset>
+                <fieldset class="fieldset-platforms">
                     <legend>Platforms</legend>
-                    <label for="psp"><input type="checkbox" id="psp" name="platforms[]" value="psp">psp</label>
-                    <label for="xbox"><input type="checkbox" id="xbox" name="platforms[]" value="xbox">xbox</label>
-                    <label for="nintendo"><input type="checkbox" id="nintendo" name="platforms[]" value="nintendo">nintendo</label>
-                    <label for="windows"><input type="checkbox" id="windows" name="platforms[]" value="windows">windows</label>
-                    <label for="macos"><input type="checkbox" id="macos" name="platforms[]" value="macos">macos</label>
-                    <label for="linux"><input type="checkbox" id="linux" name="platforms[]" value="linux">linux</label>
+                    <div class="platform">
+                        <label for="psp">
+                            <img src="../public/assets/svg/psp.svg" alt="">
+                        </label>
+                        <input type="checkbox" id="psp" name="platforms[]" value="psp">
+                    </div>
+                    <div class="platform">
+                        <label for="xbox">
+                            <img src="../public/assets/svg/xbox.svg" alt="">
+                        </label>
+                        <input type="checkbox" id="xbox" name="platforms[]" value="xbox">
+                    </div>
+                    <div class="platform">
+                        <label for="nintendo">
+                            <img src="../public/assets/svg/nintendo.svg" alt="">
+                        </label>
+                        <input type="checkbox" id="nintendo" name="platforms[]" value="nintendo">
+                    </div>
+                    <div class="platform">
+                        <label for="windows">
+                            <img src="../public/assets/svg/windows.svg" alt="">
+                        </label>
+                        <input type="checkbox" id="windows" name="platforms[]" value="windows">
+                    </div>
+                    <div class="platform">
+                        <label for="macos">
+                            <img src="../public/assets/svg/macos_light.svg" alt="">
+                        </label>
+                        <input type="checkbox" id="macos" name="platforms[]" value="macos">
+                    </div>
+                    <div class="platform">
+                        <label for="linux">
+                            <img src="../public/assets/svg/linux.svg" alt="">
+                        </label>
+                        <input type="checkbox" id="linux" name="platforms[]" value="linux">
+                    </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="fieldset-requirements">
                     <legend>Requirements</legend>
                     <div class="requirements-content">
                         <p>Minimum:</p>
-                        <select name="min_system_operating" id="">
+                        <select name="os[0]" id="">
                             <option value="" disabled selected>system operating</option>
-                            <option value="wind64">win 64 bits</option>
-                            <option value="wind32">win 32 bits</option>
+                            <option value="win64">win 64 bits</option>
+                            <option value="win32">win 32 bits</option>
                         </select>
 
-                        <select name="cpu" id="">
+                        <select name="cpu[0]" id="">
                             <option value="" disabled selected>cpu</option>
                             <option value="intelcore">intel core</option>
                             <option value="amdryzen">amd ryzen</option>
                         </select>
 
-                        <select name="ram" id="">
+                        <select name="ram[0]" id="">
                             <option value="" disabled selected>memory ram</option>
                             <option value="ddr2">ddr2</option>
                             <option value="ddr3">ddr3</option>
@@ -49,7 +79,7 @@
                             <option value="ddr5">ddr5</option>
                         </select>
 
-                        <select name="gpu" id="">
+                        <select name="gpu[0]" id="">
                             <option value="" disabled selected>gpu</option>
                             <option value="nvideagraphics">nvidea graphics</option>
                             <option value="amdgraphics">amd graphics</option>
@@ -60,19 +90,19 @@
 
                     <div class="requirements-content">
                         <p>Recommended:</p>
-                        <select name="rec_system_operating" id="">
+                        <select name="os[1]" id="">
                             <option value="" disabled selected>system operating</option>
                             <option value="win64">win 64 bits</option>
                             <option value="win32">win 32 bits</option>
                         </select>
 
-                        <select name="cpu" id="">
+                        <select name="cpu[1]" id="">
                             <option value="" disabled selected>cpu</option>
                             <option value="intelcore">intel core</option>
-                            <option value="amd">amd ryzen</option>
+                            <option value="amdryzen">amd ryzen</option>
                         </select>
 
-                        <select name="ram" id="">
+                        <select name="ram[1]" id="">
                             <option value="" disabled selected>memory ram</option>
                             <option value="ddr2">ddr2</option>
                             <option value="ddr3">ddr3</option>
@@ -80,7 +110,7 @@
                             <option value="ddr5">ddr5</option>
                         </select>
 
-                        <select name="gpu" id="">
+                        <select name="gpu[1]" id="">
                             <option value="" disabled selected>gpu</option>
                             <option value="nvideagraphics">nvidea graphics</option>
                             <option value="amdgraphics">amd graphics</option>
