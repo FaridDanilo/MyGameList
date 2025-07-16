@@ -88,7 +88,7 @@
                 <h2>Platforms</h2>
                 <div class="content">
                     <div class="box">
-                        <img class="platforms-icon" src="public/assets/svg/playstation.svg" alt="psp">
+                        <img class="platforms-icon" src="public/assets/svg/psp.svg" alt="psp">
                     </div>
 
                     <div class="box">

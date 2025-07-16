@@ -273,10 +273,51 @@ form {
     padding: 10px;
 }
 
-input, select {
+input, select, textarea {
     border: none;
-    margin: 10px 0;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-bottom: 8px;
     padding: 8px 12px;
+}
+
+.dropzone {
+    position: relative;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 2px dashed var(--slate-shadow);
+    transition: border-color 0.3s, background 0.2s;
+}
+
+.dropzone.dragover {
+    border-color: #2e7d32;
+    background: #e8f5e9;
+}
+
+.dropzone input[type="file"] {
+    display: none;
+}
+
+.dropzone span {
+    font-size: 13px;
+    color: var(--slate-shadow);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.file-list {
+    color: #222;
+    font-size: 0.97em;
+    margin-top: 9px;
+    font-style: italic;
+    min-height: 1em;
+}
+
+.fa-image, .fa-images {
+    font-size: 1.2rem;
 }
 
 textarea {
@@ -287,27 +328,34 @@ textarea {
     border: none;
 }
 
+fieldset {
+    border-radius: 8px;
+    border: 1px solid var(--slate-shadow);
+}
+
 .fieldset-platforms {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 .fieldset-platforms .platform {
     display: flex;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 8px;
-    margin: 4px;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 8px;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--slate-shadow);
 }
 
-.fieldset-platforms img {
-    width: 2rem;
+.fieldset-platforms .platform.active {
+    transform: scale(0.9);
 }
 
+.fieldset-platforms img {
+    width: 1.8rem;
+}
 
 .fieldset-platforms input[type="checkbox"] {
     display: none;
@@ -315,7 +363,7 @@ textarea {
 
 .fieldset-requirements {
     display: flex;
-    margin-top: 15px;
+    margin: 15px 0;
     justify-content: space-between;
 }
 
@@ -324,7 +372,8 @@ textarea {
 }
 
 .requirements-content p {
-    margin-top: 10px;
+    font-size: 14px;
+    margin: 10px 0;
 }
 
 .requirements-content select {

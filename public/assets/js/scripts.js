@@ -1,3 +1,4 @@
+//SLIDER IMG START
 const slides = document.querySelectorAll('.slideshow-container > div');
 const prevBtn = document.querySelector('.prev-slide');
 const nextBtn = document.querySelector('.next-slide');
@@ -19,7 +20,6 @@ function prevSlide() {
     showSlide(currentSlide);
 }
 
-// Inicializar
 showSlide(currentSlide);
 
 if (nextBtn && prevBtn) {
@@ -28,10 +28,19 @@ if (nextBtn && prevBtn) {
 }
 
 setInterval(nextSlide, 9000);
+//SLIDER IMG END
 
 // ---------------------------------------------------------------------- //
 
-// DROPDOWN-MENU
+document.querySelectorAll('.platform input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', function() {
+        this.closest('.platform').classList.toggle('active', this.checked);
+    });
+});
+
+// ---------------------------------------------------------------------- //
+
+// DROPDOWN-MENU START
 document.querySelectorAll('.dropdown-btn').forEach(btn => {
     btn.addEventListener('click', function (e) {
         e.stopPropagation();
@@ -43,3 +52,4 @@ document.querySelectorAll('.dropdown-btn').forEach(btn => {
 document.addEventListener('click', () => {
     document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
 });
+// DROPDOWN-MENU END
