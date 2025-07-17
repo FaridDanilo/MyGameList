@@ -262,15 +262,14 @@ main {
 
 /* ========== Add New Game Form START ========== */
 form {
-    max-width: 500px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-top: 10px;
     border: 1px solid var(--slate-shadow);
 }
 
 .form-content {
     display: flex;
-    width: 500px;
+    width: 470px;
     padding: 10px;
     flex-direction: column;
 }
@@ -296,13 +295,13 @@ input:focus, textarea:focus, select:focus {
     padding: 15px;
     text-align: center;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     border: 1px dashed var(--slate-shadow);
     transition: border-color 0.3s, background 0.2s;
 }
 
 .dropzone:hover {
-    border: 1px dashed var(--hover-effect-blue) ;
+    border-color: var(--hover-effect-blue);
 }
 
 .dropzone.dragover {
@@ -352,8 +351,8 @@ fieldset {
 
 .fieldset-platforms .platform {
     display: flex;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3rem;
+    height: 3rem;
     margin: 8px;
     border-radius: 5px;
     align-items: center;
@@ -367,7 +366,7 @@ fieldset {
 }
 
 .fieldset-platforms img {
-    width: 1.8rem;
+    width: 1.5rem;
 }
 
 .fieldset-platforms input[type="checkbox"] {
@@ -394,7 +393,7 @@ fieldset {
     /* margin: 10px 0; */
 }
 
-button[type="submit"] {
+button[type="button"], button[type="submit"] {
     border: none;
     cursor: pointer;
     padding: 8px 12px;
@@ -403,8 +402,14 @@ button[type="submit"] {
     background-color: var(--hover-effect-green-dark);
 }
 
+button[type="button"]:hover, 
 button[type="submit"]:hover {
     background-color: var(--hover-effect-green-light);
+}
+
+button[type="button"] {
+    position: absolute;
+    margin: 12px;
 }
 /* ========== Add New Game Form END ========== */
 

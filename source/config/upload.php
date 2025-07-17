@@ -81,10 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
     $stmt_req->execute();
 
-    print_r($_POST);
-
-    // header("Location: ../../index.php");
-    // exit;
+    header("Location: ../../index.php");
+    exit;
 
     $stmt->close();
     $conn->close();

@@ -26,8 +26,8 @@
                 <button class="dropdown-btn">Add New Game<i class="fa-solid fa-plus"></i></button>
                 <ul class="dropdown-content">
                     <li><a href="pages/new_game.php">New Game</a></li>
-                    <li><a href="#">New Sequel</a></li>
-                    <li><a href="#">New DLC</a></li>
+                    <li><a href="pages/new_sequel.php">New Sequel</a></li>
+                    <li><a href="pages/new_dlc.php">New DLC</a></li>
                 </ul>
             </div>
         </nav>

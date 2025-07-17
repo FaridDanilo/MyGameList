@@ -7,7 +7,6 @@
 <body>
     <a href="../index.php"><button type="button"><i class="fa-regular fa-circle-left"></i> Return</button></a>
     <main>
-        <!-- <h2>Add new Game</h2> -->
         <form action="../source/config/upload.php" method="post" enctype="multipart/form-data">
             <div class="form-content">
                 <input type="text" name="title_game" placeholder="Title Game" required>
@@ -37,37 +36,43 @@
                     <legend>Platforms</legend>
                     <div class="platform">
                         <label for="psp">
-                            <img src="../public/assets/svg/psp.svg" alt="psp">
+                            <img src="../public/assets/svg/psp.svg" alt="psp" title="Play Station">
                         </label>
                         <input type="checkbox" id="psp" name="platforms[]" value="psp">
                     </div>
                     <div class="platform">
                         <label for="xbox">
-                            <img src="../public/assets/svg/xbox.svg" alt="xbox">
+                            <img src="../public/assets/svg/xbox.svg" alt="xbox" title="Xbox">
                         </label>
                         <input type="checkbox" id="xbox" name="platforms[]" value="xbox">
                     </div>
                     <div class="platform">
                         <label for="nintendo">
-                            <img src="../public/assets/svg/nintendo.svg" alt="nintendo">
+                            <img src="../public/assets/svg/nintendo.svg" alt="nintendo" title="Nintendo">
                         </label>
                         <input type="checkbox" id="nintendo" name="platforms[]" value="nintendo">
                     </div>
                     <div class="platform">
+                        <label for="steam">
+                            <img src="../public/assets/svg/steam.svg" alt="steam" title="Steam">
+                        </label>
+                        <input type="checkbox" id="steam" name="platforms[]" value="steam">
+                    </div>
+                    <div class="platform">
                         <label for="windows">
-                            <img src="../public/assets/svg/windows.svg" alt="windows">
+                            <img src="../public/assets/svg/windows.svg" alt="windows" title="Windows">
                         </label>
                         <input type="checkbox" id="windows" name="platforms[]" value="windows">
                     </div>
                     <div class="platform">
                         <label for="macos">
-                            <img src="../public/assets/svg/macos_light.svg" width="1rem" alt="macos">
+                            <img src="../public/assets/svg/macos_light.svg" width="1rem" alt="macos" title="macOS">
                         </label>
                         <input type="checkbox" id="macos" name="platforms[]" value="macos">
                     </div>
                     <div class="platform">
                         <label for="linux">
-                            <img src="../public/assets/svg/linux.svg" alt="linux">
+                            <img src="../public/assets/svg/linux.svg" alt="linux" title="Linux">
                         </label>
                         <input type="checkbox" id="linux" name="platforms[]" value="linux">
                     </div>
