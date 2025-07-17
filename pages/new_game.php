@@ -5,7 +5,7 @@
 <title>New Game</title>
 
 <body>
-    <a href="../index.php"><button>Return</button></a>
+    <a href="../index.php"><button type="button"><i class="fa-regular fa-circle-left"></i> Return</button></a>
     <main>
         <!-- <h2>Add new Game</h2> -->
         <form action="../source/config/upload.php" method="post" enctype="multipart/form-data">
@@ -137,7 +137,7 @@
                         <input type="text" name="storage[1]" placeholder="storage">
                     </div>
                 </fieldset>
-                <button type="submit">Upload Game</button>
+                <button type="submit"><i class="fa-solid fa-upload"></i> Upload</button>
             </div>
         </form>
     </main>

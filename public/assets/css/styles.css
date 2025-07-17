@@ -13,6 +13,9 @@
     --midnight-gray: #151b23;
     --black-void: #010409;
     --night-blue: #0d1117;
+    --hover-effect-blue: #1f6feb;
+    --hover-effect-green-dark: #29903b;
+    --hover-effect-green-light: #309c42;
 }
 
 body {
@@ -243,8 +246,6 @@ main {
 /* ========== Platforms END ========== */
 
 
-
-
 /* ========== Requirements START ========== */
 .requirements .content {
     display: flex;
@@ -261,40 +262,51 @@ main {
 
 /* ========== Add New Game Form START ========== */
 form {
-    border: 1px solid var(--slate-shadow);
     max-width: 500px;
     border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid var(--slate-shadow);
 }
 
 .form-content {
     display: flex;
     width: 500px;
-    flex-direction: column;
     padding: 10px;
+    flex-direction: column;
 }
 
 input, select, textarea {
     border: none;
-    text-transform: capitalize;
+    color: var(--white-color);
+    padding: 8px 12px;
     border-radius: 5px;
     margin-bottom: 8px;
-    padding: 8px 12px;
+    background: none;
+    text-transform: capitalize;
+    outline: 1px solid var(--slate-shadow);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 1px solid var(--hover-effect-blue);
 }
 
 .dropzone {
     position: relative;
-    border-radius: 12px;
+    border-radius: 5px;
     padding: 15px;
     text-align: center;
     cursor: pointer;
     margin-bottom: 20px;
-    border: 2px dashed var(--slate-shadow);
+    border: 1px dashed var(--slate-shadow);
     transition: border-color 0.3s, background 0.2s;
 }
 
+.dropzone:hover {
+    border: 1px dashed var(--hover-effect-blue) ;
+}
+
 .dropzone.dragover {
-    border-color: #2e7d32;
-    background: #e8f5e9;
+    border-color: var(--hover-effect-blue);
 }
 
 .dropzone input[type="file"] {
@@ -303,9 +315,9 @@ input, select, textarea {
 
 .dropzone span {
     font-size: 13px;
-    color: var(--slate-shadow);
     display: block;
     margin-bottom: 10px;
+    color: var(--slate-shadow);
 }
 
 .file-list {
@@ -351,6 +363,7 @@ fieldset {
 
 .fieldset-platforms .platform.active {
     transform: scale(0.9);
+    border: 1px solid var(--hover-effect-blue);
 }
 
 .fieldset-platforms img {
@@ -379,6 +392,19 @@ fieldset {
 .requirements-content select {
     display: flex;
     /* margin: 10px 0; */
+}
+
+button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: var(--white-color);
+    background-color: var(--hover-effect-green-dark);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--hover-effect-green-light);
 }
 /* ========== Add New Game Form END ========== */
 
