@@ -1,0 +1,3 @@
+#Ignore Uploads File
+/uploads/*
+!/uploads/.gitkeep

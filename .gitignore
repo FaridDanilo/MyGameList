@@ -1,4 +1,0 @@
-#Ignore Uploads File
-/uploads/*
-!/uploads/.gitkeep
-touch uploads/.gitkeep

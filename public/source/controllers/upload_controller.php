@@ -1,4 +1,4 @@
-<?php include "conf.php";
+<?php include "../config/conf.php";
 
 include DB_CONN_URL;
 
@@ -21,7 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rec_gpu = $_POST['gpu'][1];
     $rec_storage = $_POST['storage'][1];
 
-    $upload_dir = '../../uploads/';
+    $upload_dir = UPLOAD_DIR;
+    
+    $upload_dir_front_page = '../../uploads/';
+    $upload_dir_env = '../../uploads/';
+    $upload_dir_mechanics = '../../uploads/';
 
     // Subir imagen principal (front_page_img)
     $front_img_name = '';
@@ -81,8 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
     $stmt_req->execute();
 
-    header("Location: ../../index.php");
-    exit;
+    // header("Location: " . BASE_URL);
+    // exit;
 
     $stmt->close();
     $conn->close();

@@ -1,4 +1,4 @@
-<?php include "source/config/conf.php"; ?>
+<?php include "public/source/config/conf.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

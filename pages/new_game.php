@@ -1,4 +1,4 @@
-<?php include "../source/config/conf.php"; ?>
+<?php include "../public/source/config/conf.php"; ?>
 
 <link rel="stylesheet" href="<?= ASSETS_URL ?>css/styles.css">
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
@@ -7,7 +7,7 @@
 <body>
     <a href="../index.php"><button type="button"><i class="fa-regular fa-circle-left"></i> Return</button></a>
     <main>
-        <form action="../source/config/upload.php" method="post" enctype="multipart/form-data">
+        <form action="../public/source/controllers/upload_controller.php" method="post" enctype="multipart/form-data">
             <div class="form-content">
                 <input type="text" name="title_game" placeholder="Title Game" required>
                 <textarea name="description_game" cols="50" placeholder="Description..." required></textarea>
@@ -38,43 +38,43 @@
                         <label for="psp">
                             <img src="../public/assets/svg/psp.svg" alt="psp" title="Play Station">
                         </label>
-                        <input type="checkbox" id="psp" name="platforms[]" value="psp">
+                        <input type="checkbox" id="psp" name="platforms[]" value="psp" required>
                     </div>
                     <div class="platform">
                         <label for="xbox">
                             <img src="../public/assets/svg/xbox.svg" alt="xbox" title="Xbox">
                         </label>
-                        <input type="checkbox" id="xbox" name="platforms[]" value="xbox">
+                        <input type="checkbox" id="xbox" name="platforms[]" value="xbox" required>
                     </div>
                     <div class="platform">
                         <label for="nintendo">
                             <img src="../public/assets/svg/nintendo.svg" alt="nintendo" title="Nintendo">
                         </label>
-                        <input type="checkbox" id="nintendo" name="platforms[]" value="nintendo">
+                        <input type="checkbox" id="nintendo" name="platforms[]" value="nintendo" required>
                     </div>
                     <div class="platform">
                         <label for="steam">
                             <img src="../public/assets/svg/steam.svg" alt="steam" title="Steam">
                         </label>
-                        <input type="checkbox" id="steam" name="platforms[]" value="steam">
+                        <input type="checkbox" id="steam" name="platforms[]" value="steam" required>
                     </div>
                     <div class="platform">
                         <label for="windows">
                             <img src="../public/assets/svg/windows.svg" alt="windows" title="Windows">
                         </label>
-                        <input type="checkbox" id="windows" name="platforms[]" value="windows">
+                        <input type="checkbox" id="windows" name="platforms[]" value="windows" required>
                     </div>
                     <div class="platform">
                         <label for="macos">
                             <img src="../public/assets/svg/macos_light.svg" width="1rem" alt="macos" title="macOS">
                         </label>
-                        <input type="checkbox" id="macos" name="platforms[]" value="macos">
+                        <input type="checkbox" id="macos" name="platforms[]" value="macos" required>
                     </div>
                     <div class="platform">
                         <label for="linux">
                             <img src="../public/assets/svg/linux.svg" alt="linux" title="Linux">
                         </label>
-                        <input type="checkbox" id="linux" name="platforms[]" value="linux">
+                        <input type="checkbox" id="linux" name="platforms[]" value="linux" required>
                     </div>
                 </fieldset>
 
@@ -108,7 +108,7 @@
                             <option value="amdgraphics">amd graphics</option>
                         </select>
 
-                        <input type="text" name="storage[0]" placeholder="storage">
+                        <input type="number" name="storage[0]" placeholder="storage">
                     </div>
 
                     <div class="requirements-content">
@@ -139,7 +139,7 @@
                             <option value="amdgraphics">amd graphics</option>
                         </select>
 
-                        <input type="text" name="storage[1]" placeholder="storage">
+                        <input type="number" name="storage[1]" placeholder="storage" required>
                     </div>
                 </fieldset>
                 <button type="submit"><i class="fa-solid fa-upload"></i> Upload</button>
