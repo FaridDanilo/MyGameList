@@ -281,6 +281,7 @@ input, select, textarea {
     border-radius: 5px;
     margin-bottom: 8px;
     background: none;
+    width: 100%;
     text-transform: capitalize;
     outline: 1px solid var(--slate-shadow);
 }
@@ -350,13 +351,12 @@ fieldset {
 }
 
 .fieldset-platforms .platform {
-    display: flex;
+    display: grid;
     width: 3rem;
     height: 3rem;
     margin: 8px;
     border-radius: 5px;
-    align-items: center;
-    justify-content: center;
+    place-items: center;
     border: 1px solid var(--slate-shadow);
 }
 
@@ -366,7 +366,7 @@ fieldset {
 }
 
 .fieldset-platforms img {
-    width: 1.5rem;
+    width: 1.3rem;
 }
 
 .fieldset-platforms input[type="checkbox"] {

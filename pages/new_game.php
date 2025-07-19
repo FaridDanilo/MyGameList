@@ -1,13 +1,14 @@
-<?php include "../public/source/config/conf.php"; ?>
+<?php 
+include '../public/src/config/conf.php';
+include HEADER_PATH;
+?>
 
-<link rel="stylesheet" href="<?= ASSETS_URL ?>css/styles.css">
-<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
 <title>New Game</title>
 
 <body>
     <a href="../index.php"><button type="button"><i class="fa-regular fa-circle-left"></i> Return</button></a>
     <main>
-        <form action="../public/source/controllers/upload_controller.php" method="post" enctype="multipart/form-data">
+        <form action="../public/src/controllers/upload_controller.php" method="post" enctype="multipart/form-data">
             <div class="form-content">
                 <input type="text" name="title_game" placeholder="Title Game" required>
                 <textarea name="description_game" cols="50" placeholder="Description..." required></textarea>
@@ -147,4 +148,5 @@
         </form>
     </main>
 </body>
-<script src="../public/assets/js/scripts.js"></script>
+
+<?php include FOOTER_PATH; ?>

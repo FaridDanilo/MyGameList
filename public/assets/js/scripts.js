@@ -31,8 +31,8 @@ setInterval(nextSlide, 9000);
 // SLIDER IMG END
 
 //SELECTED PLATFORM START
-document.querySelectorAll('.platform input[type="checkbox"]').forEach(input => {
-    input.addEventListener('change', function () {
+document.querySelectorAll('.platform').forEach(platform => {
+    platform.addEventListener('change', function () {
         this.closest('.platform').classList.toggle('active', this.checked);
     });
 });

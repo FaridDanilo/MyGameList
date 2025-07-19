@@ -1,6 +1,6 @@
 <?php include "../config/conf.php";
 
-include DB_CONN_URL;
+include DB_CONN_PATH;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title_game = trim($_POST['title_game']);
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rec_gpu = $_POST['gpu'][1];
     $rec_storage = $_POST['storage'][1];
 
-    $upload_dir = UPLOAD_DIR;
+    $upload_dir = UPLOAD_PATH;
     
     $upload_dir_front_page = '../../uploads/';
     $upload_dir_env = '../../uploads/';
